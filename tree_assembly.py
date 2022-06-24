@@ -25,7 +25,7 @@ class tree(node):
     def make_tree(self,file):
         record = SeqIO(file,'fasta')
         for i in record:
-            self.make_a_seq(i.seq)
+            self.make_a_seq(str(i.seq))
 
     def make_a_seq(self,sequence):
         level = 1
