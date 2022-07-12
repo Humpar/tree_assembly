@@ -23,7 +23,7 @@ class tree(node):
         self.this_base = None
         self.base_alias = {1:'A',2:'T',3:'C',4:'G',5:None,'A':1,'T':2,'C':3,'G':4}
     def make_tree(self,file):
-        record = SeqIO(file,'fasta')
+        record = SeqIO.parse(file,'fasta')
         for i in record:
             self.make_a_seq(str(i.seq))
 
